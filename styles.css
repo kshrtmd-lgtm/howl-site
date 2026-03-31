@@ -44,9 +44,16 @@ a:hover {
 }
 
 .site-title {
-  font-size: 1.125rem;
-  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
   color: #111827;
+}
+
+.site-logo {
+  display: block;
+  width: auto;
+  height: 22px;
+  max-width: min(180px, 45vw);
 }
 
 .site-nav {
@@ -138,12 +145,22 @@ h1 {
 }
 
 .prose p,
-.prose ul {
+.prose ul,
+.prose ol {
   margin: 0;
 }
 
-.prose ul {
+.prose ul,
+.prose ol {
   padding-left: 1.2rem;
+}
+
+.prose p + ol,
+.prose p + ul,
+.prose ol + p,
+.prose ul + p,
+.prose ol + ol {
+  margin-top: 12px;
 }
 
 .updated-at {
